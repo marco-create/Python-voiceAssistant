@@ -46,7 +46,7 @@ def user_speak():
             
         except Exception:
             AI_speak('I\'m sorry, I didn\'t get it. Say it again.')
-
+            return None
         return human_voice
 
 ## WELCOME MESSAGE
@@ -55,25 +55,28 @@ AI_speak('Well done {}'.format(my_name))
 ## WHILE TRUE...
 while True:
     AI_speak('What are we gonna do?')
-    user = user_speak().lower()
-    if 'stack' in user or 'overflow' in user:
+    human_voice = user_speak().lower()
+    if human_voice == 0:
+        continue
+        
+    if 'stack' in human_voice or 'overflow' in human_voice:
         stack_open = webbrowser.open_new_tab('https://stackoverflow.com/')
         AI_speak('Let\'s solve some code, {}'.format(my_name))
         time.sleep(6)
 
-    elif 'youtube' in user:
+    elif 'youtube' in human_voice:
         AI_speak('What are you looking for in Youtube?')
         yt_search = user_speak()
         AI_speak('Ok. Let\'s search for {}.'.format(yt_search))
         yt_open = webbrowser.open_new_tab('https://www.youtube.com/results?search_query={}'.format(yt_search))
         time.sleep(6)
 
-    elif 'translat' in user:
+    elif 'translat' in human_voice:
         AI_speak('Opening translator')
         deepl_open = webbrowser.open_new_tab('https://www.deepl.com/en/translator')
         time.sleep(5)
 
-    elif 'from' in user or 'creator' in user or 'info' in user:
+    elif 'from' in human_voice or 'creator' in human_voice or 'info' in human_voice:
         AI_speak('Marco is my creator. You can find him here...')
         marcoGit_open = webbrowser.open_new_tab('https://github.com/marco-create')
         time.sleep(5)
