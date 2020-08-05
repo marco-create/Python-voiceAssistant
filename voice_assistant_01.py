@@ -68,6 +68,11 @@ while True:
         yt_open = webbrowser.open_new_tab('https://www.youtube.com/results?search_query={}'.format(yt_search))
         time.sleep(6)
 
+    elif 'translat' in user:
+        AI_speak('Opening translator')
+        deepl_open = webbrowser.open_new_tab('https://www.deepl.com/en/translator')
+        time.sleep(5)
+
     elif 'from' in user or 'creator' in user or 'info' in user:
         AI_speak('Marco is my creator. You can find him here...')
         marcoGit_open = webbrowser.open_new_tab('https://github.com/marco-create')
