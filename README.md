@@ -11,5 +11,7 @@ Some special required libraries:
 
 - [x] asking for user name
 - [x] open YouTube and search for user choice
+- [x] open DeepL translator
 - [ ] implement with selenium to interact with pages
 - [ ] further interactions
+- [ ] more flexibility for user voice commands
