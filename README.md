@@ -3,7 +3,6 @@ AI voice assistant with web scraping
 
 Some special required libraries:
 - [speech recognition](https://pypi.org/project/SpeechRecognition/);
-- [selenium](https://pypi.org/project/selenium/)
 - [pyttsx3](https://pypi.org/project/pyttsx3/)
 
 
